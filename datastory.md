@@ -44,7 +44,8 @@ It turns out that they agree relatively well.
 We then compare them quantitatively and they agree pretty well too.
 ## Comparison of the predictive performances
 
-{% include figures/classifiers_performances_table.html %}
+{% include figures/classifiers_performances_table_1500_wide.html %}
+<!-- {% include figures/classifiers_performances_table.html %} -->
 
 **Caption for the above table**:
 Prediction performances on the test set.
@@ -65,7 +66,8 @@ Let's look at the distribution of the features that are considered the most impo
 
 Here are the features ranked as most important for each classifier:
 
-{% include figures/coef_and_importance_comparison_table.html %}
+{% include figures/most_important_features_table.html %}
+<!-- {% include figures/coef_and_importance_comparison_table.html %} -->
 
 We note that several features are considered important by several classifiers, such as `C_households`, `C_blocksdirtfloor`, `C_waterbath`.
 
@@ -87,7 +89,7 @@ We expect that our feature importances should loosely agree with their coefficie
 
 We will use the feature importances from the logistic regression because they range over positive as well as negative values, contrarily to the feature importance scores from random forest and XGBoost classifiers.
 
-{% include figures/coef_and_importance_comparison_barplot.html %}
+{% include figures/coef_and_importance_comparison_table.html %}
 
 We first notice that the ranking of importances is almost the same in the paper and in our task:
 
@@ -101,6 +103,8 @@ We also note that the sign of the coefficients agree with the sign of the featur
 We conclude that our feature importance scores agree qualitatively with the coefficients from the paper's regressions.
 
 Here we show the paper's coefficients transformed in the range \[0, 1\], along with the importance scores that we obtained for the same features and transformed in the same way.
+
+{% include figures/coef_and_importance_comparison_barplot.html %}
 
 **Observations:**
 - The scores are almost the same for 3 of the cement related features (`S_cementfloorbed`, `S_cementfloorkit`, `S_cementfloordin`) and for `S_cesds`, the depression score.
