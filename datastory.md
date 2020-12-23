@@ -44,8 +44,7 @@ It turns out that they agree relatively well.
 We then compare them quantitatively and they agree pretty well too.
 ## Comparison of the predictive performances
 
-{% include figures/classifiers_performances_table_1500_wide.html %}
-<!-- {% include figures/classifiers_performances_table.html %} -->
+{% include figures/classifiers_performances_table.html %}
 
 **Caption for the above table**:
 Prediction performances on the test set.
